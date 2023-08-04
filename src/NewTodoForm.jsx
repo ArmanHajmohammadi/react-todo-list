@@ -4,7 +4,7 @@ export function NewTodoForm(props) {
   const [newItem, setNewItem] = useState("");
   function handleSubmit(e) {
     e.preventDefault();
-
+    if (newItem === "") return;
     props.onSubmit(newItem);
 
     setNewItem("");
